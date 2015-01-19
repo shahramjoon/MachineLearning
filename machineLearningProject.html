@@ -175,6 +175,9 @@ src &lt;- training
 
 training &lt;- src[inTrain,]
 validation &lt;- src [-inTrain,]</code></pre>
+</div>
+<div id="predictive-modeling" class="section level2">
+<h2>Predictive Modeling</h2>
 <p>For our predictive modeling, we used 3 fold cross validation. We used random Foresting model method for training with 100 trees.</p>
 <pre class="r"><code>control1 &lt;- trainControl(method = &quot;cv&quot;, number = 3, allowParallel = TRUE)
 
@@ -220,6 +223,9 @@ model1 &lt;- train(classe~., data = training, method=&quot;rf&quot;, ntrees= 100
 ## C    0   25 2529   13    0 0.0148032723
 ## D    2    1   30 2377    2 0.0145107794
 ## E    0    0    2   12 2692 0.0051736881</code></pre>
+</div>
+<div id="accuracy-of-the-model" class="section level2">
+<h2>Accuracy of the model</h2>
 <p>To measure accuracy of our model, We applied the model to validation dataset</p>
 <pre class="r"><code>pred &lt;- predict ( model1, validation )
 
@@ -234,6 +240,9 @@ table ( pred, validation$classe)</code></pre>
 <p>The accuracy of our model against Validation data was</p>
 <pre class="r"><code>sum ( pred == validation$classe) / nrow(validation)</code></pre>
 <pre><code>## [1] 0.9918434</code></pre>
+</div>
+<div id="apply-model-to-testing-dataset" class="section level2">
+<h2>Apply Model to Testing Dataset</h2>
 <p>Now, we are in position to apply our model to final Testing Data that was provided</p>
 <pre class="r"><code>prediction &lt;- predict ( model1, testing)
 

@@ -167,6 +167,8 @@ dim ( training)
 ## [1] 19622    41
 ```
 
+
+
 To validate our model based on training data that is provided, we divided the training data to two pieces, we allocated %75 of rows chosen randomly to training data and remaining %25 t validation data to validate our model and compare prediction with validation data. 
 
 
@@ -182,6 +184,8 @@ src <- training
 training <- src[inTrain,]
 validation <- src [-inTrain,]
 ```
+
+## Predictive Modeling 
 
 
 For our predictive modeling, we used 3 fold cross validation. We used random Foresting model method for training with 100 trees.
@@ -217,8 +221,7 @@ model1
 ##   21    0.9880416  0.9848704  0.002769163  0.003503697
 ##   40    0.9811789  0.9761873  0.004329492  0.005478465
 ## 
-## Accuracy was used to select the optimal model using 
-##  the largest value.
+## Accuracy was used to select the optimal model using  the largest value.
 ## The final value used for the model was mtry = 21.
 ```
 
@@ -244,7 +247,7 @@ model1$finalModel
 ## E    0    0    2   12 2692 0.0051736881
 ```
 
-
+## Accuracy of the model
                 
 To measure accuracy of our model, We applied the model to validation dataset 
 
@@ -277,6 +280,8 @@ sum ( pred == validation$classe) / nrow(validation)
 ```
 ## [1] 0.9918434
 ```
+
+## Apply Model to Testing Dataset
 
 Now, we are in position to apply our model to final Testing Data that was provided
 
