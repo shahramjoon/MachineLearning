@@ -7,9 +7,7 @@ output: html_document
 ##Synopsis
 
 In this report, we try to create a predictive model to recognize the quality of Weight LIfting Exercises has done by participants in the study. We are using random forest modeling with 3 folden cross validation for our modeling. 
-
-
-Study and Data is done by 
+The Study and Data is done by:
 
 Loveless, E.; Bulling, A.; Gellersen, H.; Ugulino, W.; Fuks, H. Qualitative Activity Recognition of Weight Lifting Exercises. Proceedings of 4th International Conference in Cooperation with SIGCHI (Augmented Human '13) . Stuttgart, Germany: ACM SIGCHI, 2013.
 
@@ -112,6 +110,8 @@ dim ( training)
 
 ```
 
+
+
 To validate our model based on training data that is provided, we divided the training data to two pieces, we allocated %75 of rows chosen randomly to training data and remaining %25 t validation data to validate our model and compare prediction with validation data. 
 
 
@@ -129,6 +129,8 @@ validation <- src [-inTrain,]
 
 
 ```
+
+## Predictive Modeling 
 
 
 For our predictive modeling, we used 3 fold cross validation. We used random Foresting model method for training with 100 trees.
@@ -150,7 +152,7 @@ model1$finalModel
 
 ```
 
-
+## Accuracy of the model and out of sample Error 
                 
 To measure accuracy of our model, We applied the model to validation dataset 
 
@@ -172,6 +174,8 @@ The accuracy of our model against Validation data was
 sum ( pred == validation$classe) / nrow(validation)
 
 ```
+
+## Apply Model to Testing Dataset
 
 Now, we are in position to apply our model to final Testing Data that was provided
 

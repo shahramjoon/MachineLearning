@@ -7,9 +7,7 @@ output: html_document
 ##Synopsis
 
 In this report, we try to create a predictive model to recognize the quality of Weight LIfting Exercises has done by participants in the study. We are using random forest modeling with 3 folden cross validation for our modeling. 
-
-
-Study and Data is done by 
+The Study and Data is done by:
 
 Loveless, E.; Bulling, A.; Gellersen, H.; Ugulino, W.; Fuks, H. Qualitative Activity Recognition of Weight Lifting Exercises. Proceedings of 4th International Conference in Cooperation with SIGCHI (Augmented Human '13) . Stuttgart, Germany: ACM SIGCHI, 2013.
 
@@ -247,7 +245,7 @@ model1$finalModel
 ## E    0    0    2   12 2692 0.0051736881
 ```
 
-## Accuracy of the model
+## Accuracy of the model and out of sample Error 
                 
 To measure accuracy of our model, We applied the model to validation dataset 
 

@@ -57,8 +57,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 <div id="synopsis" class="section level2">
 <h2>Synopsis</h2>
-<p>In this report, we try to create a predictive model to recognize the quality of Weight LIfting Exercises has done by participants in the study. We are using random forest modeling with 3 folden cross validation for our modeling.</p>
-<p>Study and Data is done by</p>
+<p>In this report, we try to create a predictive model to recognize the quality of Weight LIfting Exercises has done by participants in the study. We are using random forest modeling with 3 folden cross validation for our modeling. The Study and Data is done by:</p>
 <p>Loveless, E.; Bulling, A.; Gellersen, H.; Ugulino, W.; Fuks, H. Qualitative Activity Recognition of Weight Lifting Exercises. Proceedings of 4th International Conference in Cooperation with SIGCHI (Augmented Human ’13) . Stuttgart, Germany: ACM SIGCHI, 2013.</p>
 </div>
 <div id="exploratory-data-analyses" class="section level2">
@@ -224,8 +223,8 @@ model1 &lt;- train(classe~., data = training, method=&quot;rf&quot;, ntrees= 100
 ## D    2    1   30 2377    2 0.0145107794
 ## E    0    0    2   12 2692 0.0051736881</code></pre>
 </div>
-<div id="accuracy-of-the-model" class="section level2">
-<h2>Accuracy of the model</h2>
+<div id="accuracy-of-the-model-and-out-of-sample-error" class="section level2">
+<h2>Accuracy of the model and out of sample Error</h2>
 <p>To measure accuracy of our model, We applied the model to validation dataset</p>
 <pre class="r"><code>pred &lt;- predict ( model1, validation )
 
